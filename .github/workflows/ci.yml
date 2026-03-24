@@ -1,10 +1,16 @@
 name: CI
 
+# on:
+#   push:
+#     branches: ["**"]
+#   pull_request:
+#     branches: ["**"]
+
+
 on:
   push:
-    branches: ["**"]
-  pull_request:
-    branches: ["**"]
+    branches:
+      - "**"  # Dispara em qualquer commit feito em qualquer branch
 
 jobs:
   build:
