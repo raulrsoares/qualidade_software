@@ -29,9 +29,19 @@ jobs:
           name: app-jar
           path: target/*.jar
 
-  test:
+  echo:
     runs-on: ubuntu-latest
     needs: build
+
+    steps:
+      - name: Only Echo
+        run: echo "Isso acontece antes do meu teste"
+    
+  test:
+    runs-on: ubuntu-latest
+    needs:
+      - build
+      - echo
 
     services:
       mongodb:
