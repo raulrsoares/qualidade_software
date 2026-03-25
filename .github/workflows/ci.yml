@@ -44,7 +44,7 @@ jobs:
 
     steps:
       - name: Only Echo
-        run: echo "Isso acontece antes do meu teste" && echo env | grep -i node24
+        run: echo "Isso acontece antes do meu teste" && echo $FORCE_JAVASCRIPT_ACTIONS_TO_NODE24
     
   test:
     runs-on: ubuntu-latest
